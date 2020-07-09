@@ -16,7 +16,7 @@ print(x)
 
 # for i in range(0, len(y)):
 #     x.append(y[i])
-x += y
+x.extend(y)
 print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]

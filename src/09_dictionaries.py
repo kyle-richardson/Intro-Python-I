@@ -48,12 +48,14 @@ waypoints.append(new)
 # waypoints list.
 
 # YOUR CODE HERE
-changed = {
-    "lat": 43,
-    "lon": -130,
-    "name": "not a real place"
-},
-waypoints[0] = changed
+# changed = {
+#     "lat": 43,
+#     "lon": -130,
+#     "name": "not a real place"
+# },
+# waypoints[0] = changed
+waypoints[0]["name"] = "not a real place"
+waypoints[0]["lon"] = -130
 
 
 # Write a loop that prints out all the field values for all the waypoints
