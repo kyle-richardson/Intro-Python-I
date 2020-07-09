@@ -29,4 +29,25 @@ it should use today’s date to get the month and year.
 
 import sys
 import calendar
+from calendar import TextCalendar
 from datetime import datetime
+
+mon = datetime.now().month
+year = datetime.now().year
+
+argList = sys.argv[1:]
+
+if len(argList) == 2:
+    mon = int(argList[0])
+    year = int(argList[1])
+elif len(argList) == 1:
+    mon = int(argList[0])
+elif len(argList) > 2:
+    sys.exit(
+        "Invalid arguments.  Expected format '14_cal.py [month] [year]', received more than 2 arguments.")
+
+# print(f'{mon} {year}')
+# calendar.setfirstweekday(calendar.SUNDAY)
+# print(calendar.monthcalendar(year, mon))
+print(TextCalendar(firstweekday=6).formatmonth(
+    theyear=year, themonth=mon, w=5, l=2))
